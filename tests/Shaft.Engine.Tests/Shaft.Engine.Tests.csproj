@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Shaft.Engine\Shaft.Engine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Golden values captured from the REAL dist/worldgen.js + dist/math.js by
+         analysis/gen_goldens.js, which evaluates the shipped JavaScript in a vm.
+         These are what make Phase A parity a measured property, not an assumption. -->
+    <None Include="goldens.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+{
+  "name": "torch",
+  "credit": "Shaft Modeler",
+  "textureSize": [16, 16],
+  "parts": [
+    {
+      "id": "stick",
+      "name": "Stick",
+      "pivot": [0, 0, 0],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "boxes": [
+        { "origin": [-1, 0, -1], "size": [2, 8, 2], "uv": [0, 0], "inflate": 0 }
+      ]
+    },
+    {
+      "id": "tip",
+      "name": "Flame",
+      "pivot": [0, 0, 0],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 180],
+      "boxes": [
+        { "origin": [-1, 8, -1], "size": [2, 2, 2], "uv": [8, 0], "inflate": 0 }
+      ]
+    }
+  ]
+}

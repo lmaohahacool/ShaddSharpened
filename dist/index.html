@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Shaft Additionality — Beta 1.1.0</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<div id="startup-menu">
+  <h1>Shaft Additionality</h1>
+  <p class="subtitle">Select a world</p>
+  <div id="save-list"></div>
+  <button id="btn-new-world">+ New World</button>
+</div>
+
+<div id="hud"><div id="info">Loading...</div></div>
+<div id="biome-hud"><div id="music-state" class="music">♪ Music: ON</div><div id="biome-state">Biome: --</div><div id="mode-state">Mode: Creative</div><div id="time-state">Time: Day</div></div>
+<div id="blackout"></div><div id="crosshair" style="display:none"></div>
+<div id="click-hint" style="display:none"><h2>Click to play</h2><p>WASD · SPACE jump · double-SPACE fly · SHIFT sneak · CTRL sprint</p><p>LMB break · RMB place/use · U gamemode · E inventory · Ctrl+S save</p><button id="btn-settings">Settings</button></div>
+<div id="hotbar"></div><div id="health-bar"></div><div id="hunger-bar"></div><div id="cursor-item"></div>
+<div id="mining-bar-container"><div id="mining-bar-label">Mining...</div><div id="mining-bar-fill"></div></div>
+<div id="hint">M to turn off BG music</div><div id="music-credit">The background music by Sláinte</div>
+<div id="gamemode-menu"><h2>Choose Gamemode</h2><button class="mode-btn" id="btn-creative" onclick="setGamemode('creative')">Creative</button><button class="mode-btn" id="btn-survival" onclick="setGamemode('survival')">Survival</button><button class="mode-btn" id="btn-close-mode" onclick="closeGamemodeMenu()">Close</button></div>
+<div id="settings-menu"><h2>Settings</h2><label>Biome blending: <span class="val" id="blend-val">4</span> blocks<input type="range" id="blend-slider" min="0" max="16" step="1" value="4"></label><button id="btn-close-settings">Close</button><button id="btn-save-quit">Save and Quit to Menu</button></div>
+<div id="inv-screen"><div id="inv-panel"><div id="inv-left"><div id="inv-title">Inventory</div><div id="crafting-area"><div id="crafting-grid-2x2"></div><div id="crafting-arrow">→</div><div id="crafting-output"></div></div><div class="inv-label">Storage</div><div id="inv-grid"></div><div class="inv-label">Hotbar</div><div id="inv-hotbar-grid"></div><div id="inv-hint">LMB: pick up · RMB: split · E to close</div></div><div id="creative-panel"><h3>Creative Blocks</h3><div id="creative-hint">LMB: +1 · RMB: +64</div><div id="creative-grid"></div><div id="trash-slot" title="Drop items here to delete (creative only)"></div></div></div></div>
+<div id="furnace-ui"><div id="furnace-panel"><div id="furnace-title">Furnace</div><div id="furnace-main"><div id="furnace-col-left"><div id="furnace-input-slot" class="furnace-slot"></div><div id="furnace-flames">🔥</div><div style="position:relative"><div id="furnace-fuel-slot" class="furnace-slot"></div><div id="furnace-fuel-bar" style="position:absolute;top:-26px;left:0"><div id="furnace-fuel-fill"></div></div></div></div><div id="furnace-center"><div id="furnace-progress"><div id="furnace-progress-fill"></div></div><div style="font-size:24px;color:#555">→</div></div><div id="furnace-output-slot" class="furnace-slot"></div></div><div class="inv-label">Inventory</div><div id="furnace-inv-grid"></div><div class="inv-label">Hotbar</div><div id="furnace-hotbar-grid"></div></div></div>
+<div id="chest-ui"><div id="chest-panel"><div id="chest-title">Chest</div><div class="inv-label">Storage</div><div id="chest-inv-grid"></div><div class="inv-label">Hotbar</div><div id="chest-hotbar-grid"></div></div></div>
+<div id="death-screen"><h1>You died!</h1><div class="score" id="death-score">Score: 0</div><button class="death-btn" id="btn-respawn">Respawn</button><button class="death-btn" id="btn-title">Title screen</button></div>
+<div id="tooltip"></div>
+<div id="sleep-ui">
+  <div class="sleep-fade"></div>
+  <button id="sleep-leave-btn">Leave Bed</button>
+</div>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+<script type="module" src="main.js"></script>
+<div id="chat-wrapper">
+  <div id="chat-log"></div>
+  <div id="chat-autocomplete"></div>
+  <div id="chat-input-row">
+    <input type="text" id="chat-input" placeholder="/ for commands · T to chat" autocomplete="off" spellcheck="false">
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,14 @@
+{
+  "cow": {
+    "model": "models/cow.json",
+    "texture": "textures/cowtexture.png"
+  },
+  "zombie": {
+    "model": "models/zombie.json",
+    "texture": "textures/zombietexture.png"
+  },
+  "torch": {
+    "model": "models/torch.json",
+    "texture": "textures/torchtexture.png"
+  }
+}

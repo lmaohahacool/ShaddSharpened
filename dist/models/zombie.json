@@ -1,0 +1,67 @@
+{
+  "name": "zombie",
+  "credit": "Shaft Modeler",
+  "textureSize": [64, 64],
+  "parts": [
+    {
+      "id": "head",
+      "name": "Head",
+      "pivot": [0, -32, 0],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "boxes": [
+        { "origin": [-4, -32, -4], "size": [8, 8, 8], "uv": [0, 0], "inflate": 0 }
+      ]
+    },
+    {
+      "id": "body",
+      "name": "Body",
+      "pivot": [0, -24, 0],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "boxes": [
+        { "origin": [-4, -24, -2], "size": [8, 12, 4], "uv": [16, 16], "inflate": 0 }
+      ]
+    },
+    {
+      "id": "left_arm",
+      "name": "Left Arm",
+      "pivot": [-6, -24, 0],
+      "position": [0, 0, 0],
+      "rotation": [-90, 0, 0],
+      "boxes": [
+        { "origin": [-8, -24, -2], "size": [4, 12, 4], "uv": [40, 16], "inflate": 0 }
+      ]
+    },
+    {
+      "id": "right_arm",
+      "name": "Right Arm",
+      "pivot": [6, -24, 0],
+      "position": [0, 0, 0],
+      "rotation": [-90, 0, 0],
+      "boxes": [
+        { "origin": [4, -24, -2], "size": [4, 12, 4], "uv": [40, 16], "inflate": 0 }
+      ]
+    },
+    {
+      "id": "left_leg",
+      "name": "Left Leg",
+      "pivot": [-2, -12, 0],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "boxes": [
+        { "origin": [-4, -12, -2], "size": [4, 12, 4], "uv": [0, 16], "inflate": 0 }
+      ]
+    },
+    {
+      "id": "right_leg",
+      "name": "Right Leg",
+      "pivot": [2, -12, 0],
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "boxes": [
+        { "origin": [0, -12, -2], "size": [4, 12, 4], "uv": [0, 16], "inflate": 0 }
+      ]
+    }
+  ]
+}
